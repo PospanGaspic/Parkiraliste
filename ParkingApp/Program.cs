@@ -128,6 +128,10 @@ namespace Parkiraliste
             }
 
         }
+        static void aaaaa()
+        {
+
+        }
         static void Financije()
         {
             Console.Clear();
@@ -183,7 +187,7 @@ namespace Parkiraliste
         {
             
         }
-       /* static void UkupnoMjesta()
+        static void UkupnoMjesta()
         {
             int all;
             Console.WriteLine("upisi broj");
@@ -211,7 +215,7 @@ namespace Parkiraliste
             Console.WriteLine("upisi ime");
             pret = Console.ReadLine();
             Console.WriteLine("broj koji ste upisali :" + pret);
-        }*/
+        }
         
 
     }
