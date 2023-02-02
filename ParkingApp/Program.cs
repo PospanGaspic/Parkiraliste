@@ -5,20 +5,35 @@ namespace Parkiraliste
 {
     class Program
     {
-        static int a = 5
+
         static void Main(string[] args)
         {
-            MainMenu();
-           /* using (StreamWriter writer= new StreamWriter("interesantno"))
+            string ime;
+            Console.WriteLine("upisi ime");
+            ime = Console.ReadLine();
+            Console.WriteLine("ime koje ste upisali : " + ime);
+
+            using (StreamWriter writer = new StreamWriter("informacije.txt"))
             {
-                writer.Write("word");
-                writer.WriteLine("word 2");
-                writer.WriteLine("line 2");
+                
+                writer.WriteLine(ime);
+                
             }
-            Console.ReadKey();*/
-            
+            Console.ReadKey();
+
+         using (StreamReader citac = File.OpenText("informacije.txt") )
+            {
+                string linija = "";
+                while((linija = citac.ReadLine()) != null)
+                {
+                    Console.WriteLine(linija);
+                }
+            }
         }
-        static void MainMenu()
+        
+    }
+}
+        /*static void MainMenu()
         {
             Console.Clear();
             Console.WriteLine("GLAVNI IZBORNIK:");
@@ -96,6 +111,7 @@ namespace Parkiraliste
                     break;
                     void UkupnoMjesta()
                     {
+                        string filepath = "info"
                         int all = int.Parse(Console.ReadLine());
                         Console.WriteLine("upisi broj");
                         all = Convert.ToInt32(Console.ReadLine());
@@ -128,6 +144,7 @@ namespace Parkiraliste
             }
 
         }
+        
         static void aaaaa()
         {
 
@@ -183,10 +200,7 @@ namespace Parkiraliste
         {
 
         }
-        private void aaaaa()
-        {
-            
-        }
+        
         static void UkupnoMjesta()
         {
             int all;
@@ -220,3 +234,4 @@ namespace Parkiraliste
 
     }
 }
+        */
