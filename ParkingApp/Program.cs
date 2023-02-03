@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 
 namespace Parkiraliste
@@ -8,31 +9,118 @@ namespace Parkiraliste
 
         static void Main(string[] args)
         {
-            string ime;
-            Console.WriteLine("upisi ime");
-            ime = Console.ReadLine();
-            Console.WriteLine("ime koje ste upisali : " + ime);
+            //ovo je za vadit tocnu liniju, ali user bira koju, šta sad kad razmislim mi ne treba.
+            int lineNumber = 3;
+           
+            Console.WriteLine("upisi broj");
+            lineNumber = Convert.ToInt32(Console.ReadLine());
 
-            using (StreamWriter writer = new StreamWriter("informacije.txt"))
+            try
             {
-                
-                writer.WriteLine(ime);
-                
-            }
-            Console.ReadKey();
+                using (StreamReader sr = File.OpenText("informacije.txt"))
+                {
+                    for (int i = 1; i < lineNumber; i++)
+                    {
+                        sr.ReadLine();
+                    }
 
-         using (StreamReader citac = File.OpenText("informacije.txt") )
+                    Console.WriteLine(sr.ReadLine());
+                }
+            }
+            catch (IOException e)
+            {
+                Console.WriteLine("There was an error reading the file: ");
+                Console.WriteLine(e.Message);
+            }
+
+            Console.ReadLine();
+        }
+        
+        
+
+
+
+
+        //ovo je streamreader za citat cilu datoteku
+
+        /* using (StreamReader sr = File.OpenText("informacije.txt"))
+        {
+            string linija = "";
+            while ((linija = sr.ReadLine()) != null)
+            {
+                Console.WriteLine(linija);
+            }
+
+        }
+        Console.ReadKey();*/
+
+        //ovo je sta smo zajeno radili
+
+        /*string input = "";
+
+
+
+        using (StreamWriter writer = new StreamWriter("informacije.txt"))
+        {
+            while (input != "-1")
+            {
+                Console.WriteLine("upisi ime : ");
+                input = Console.ReadLine();
+
+                if (input != "-1")
+                {
+                    writer.WriteLine(input);
+
+                }
+
+
+            }
+            writer.Close();
+
+            using (StreamReader citac = File.OpenText("informacije.txt"))
             {
                 string linija = "";
-                while((linija = citac.ReadLine()) != null)
+                while ((linija = citac.ReadLine()) != null)
                 {
                     Console.WriteLine(linija);
                 }
+
+            }*/
+
+
+
+        /*void WriteToFile (String ime)
+        {
+            using (StreamWriter writer = new StreamWriter("informacije.txt"))
+            {
+
+                writer.Write(ime);
             }
-        }
-        
+            Console.ReadKey();*/
+
+
+
+        /* using (StreamWriter writer = new StreamWriter("informacije.txt"))
+         {
+
+             writer.WriteLine(imena);
+
+         }
+         Console.ReadKey();
+
+      using (StreamReader citac = File.OpenText("informacije.txt") )
+         {
+             string linija = "";
+             while((linija = citac.ReadLine()) != null)
+             {
+                 Console.WriteLine(linija);
+             }
+         }*/
     }
-}
+
+    } 
+
+
         /*static void MainMenu()
         {
             Console.Clear();
