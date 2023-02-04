@@ -4,12 +4,28 @@ using System.IO;
 
 namespace Parkiraliste
 {
-    class Program
+    public class Program
     {
 
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            //ovo je za vadit tocnu liniju, ali user bira koju, šta sad kad razmislim mi ne treba.
+            park[] mjesta = new park[1];
+            int izbor;
+            //menu
+            Console.WriteLine("1.");
+            Console.WriteLine("2.");
+            Console.WriteLine("3.");
+            Console.WriteLine("4.");
+            Console.WriteLine("izaberit broj od 1 do 4");
+            izbor = Convert.ToInt32(Console.ReadLine());
+
+        }
+
+        /*   delete cili file
+            string path = @"C:\users\bruno\source\Parkiraliste\bin\Debug\haha.txt";
+            File.Delete(path);*/
+
+        /*ovo je za vadit tocnu liniju, ali user bira koju, šta sad kad razmislim mi ne treba.
             int lineNumber = 3;
            
             Console.WriteLine("upisi broj");
@@ -34,9 +50,9 @@ namespace Parkiraliste
             }
 
             Console.ReadLine();
-        }
-        
-        
+        }*/
+
+
 
 
 
@@ -89,7 +105,8 @@ namespace Parkiraliste
 
 
 
-        /*void WriteToFile (String ime)
+        /*napraviti file
+             void WriteToFile (String ime)
         {
             using (StreamWriter writer = new StreamWriter("informacije.txt"))
             {
@@ -118,7 +135,7 @@ namespace Parkiraliste
          }*/
     }
 
-    } 
+} 
 
 
         /*static void MainMenu()
