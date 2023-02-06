@@ -1,6 +1,0 @@
-C:\Users\bruno\source\Parkiraliste\obj\x86\Debug\parking.csproj.AssemblyReference.cache
-C:\Users\bruno\source\Parkiraliste\obj\x86\Debug\parking.csproj.CoreCompileInputs.cache
-C:\Users\bruno\source\Parkiraliste\bin\Debug\ConsoleApplication.exe
-C:\Users\bruno\source\Parkiraliste\bin\Debug\ConsoleApplication.pdb
-C:\Users\bruno\source\Parkiraliste\obj\x86\Debug\ConsoleApplication.exe
-C:\Users\bruno\source\Parkiraliste\obj\x86\Debug\ConsoleApplication.pdb
